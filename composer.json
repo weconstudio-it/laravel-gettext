@@ -1,5 +1,5 @@
 {
-    "name": "xinax/laravel-gettext",
+    "name": "weconstudio/laravel-gettext-52",
     "description": "Adds localization support to laravel applications in an easy way using PoEdit and GNU-Gettext.",
     "homepage": "https://github.com/xinax/laravel-gettext",
     "keywords": [
