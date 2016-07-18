@@ -95,9 +95,9 @@ class Gettext
 
             // All locale functions are updated: LC_COLLATE, LC_CTYPE,
             // LC_MONETARY, LC_NUMERIC, LC_TIME and LC_MESSAGES
-            putenv("LC_ALL=$gettextLocale");
+            putenv("LC_MESSAGES=$gettextLocale");
             putenv("LANGUAGE=$gettextLocale");
-            setlocale(LC_ALL, $gettextLocale);
+            setlocale(LC_MESSAGES, $gettextLocale);
 
             $this->locale = $locale;
             $this->session->set($locale);
