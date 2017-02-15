@@ -192,10 +192,12 @@ class Gettext
 
         $customLocale = $this->configuration->getCustomLocale() ? "/" . $this->locale : "";
         
-        bindtextdomain($domain, $this->fileSystem->getDomainPath() . $customLocale);
-        bind_textdomain_codeset($domain, $this->encoding);
+        if(env('APP_GETTEXT')) {
+            bindtextdomain($domain, $this->fileSystem->getDomainPath() . $customLocale);
+            bind_textdomain_codeset($domain, $this->encoding);
 
-        $this->domain = textdomain($domain);
+            $this->domain = textdomain($domain);
+        }
 
         return $this;
     }
